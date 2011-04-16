@@ -1,1 +1,11 @@
 A basic test to see how to use Warden with Sinatra to auth different modular Apps
+
+Here is what I would like. I push this App to Heroku and I can count on the Following:
+
+- Any hits to the App '/' are handled in the Public way. You get Authenticated and if you're OK, Warden strategy limits you to the '/' zone.
+- Any hits to the App '/admin' are handled in the Admin way. You get Authenticated as an admin and can work magic in that way. 
+- Any hits to the App '/special' are protected in their own way, so it is nice to put special code here do to work... under the hood as they say.
+
+I have tried and tried to use Sinatra and Warden to do this, but keep running into blocks. I finally got a version of this working, but it sucks. It is not DRY and is very probably broken in ways I cannot conceive of at the moment. 
+
+If someone could kindly show me the light? I am getting Thread Errors from Warden on this pattern. And I have often ended up avoiding that, only to have the program drop into and endless loop with unauthenticated tries.
